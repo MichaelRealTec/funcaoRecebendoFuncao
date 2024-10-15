@@ -26,7 +26,7 @@ public class Program {
 		
 		ProductService ps = new ProductService(); // Instanciando a classe ProductService
 		
-		double sum = ps.filteredSum(list); // Passando a lista de Produtos como argumento para a variável sum
+		double sum = ps.filteredSum(list, p -> p.getName().charAt(0) == 'T'); // Passando a lista de Produtos como argumento para a variável sum
 		
 		System.out.println("Sum = " + String.format("%.2f", sum));
 		
